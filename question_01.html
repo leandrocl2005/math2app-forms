@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  <title>Prova 2</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header>
+    <a href="#default" class="logo">Math2App</a>
+    <div class="header-right">
+      <a class="active" href="/question_01.html">Questão 1</a>
+      <a href="/question_02.html">Questão 2</a>
+    </div>
+  </header>
+  <main>
+    <div class="question-container">
+      <div class="question-layout">
+        <h3>Questão 1</h3>
+        <p>Encontre, caso exista, a matriz inversa à matriz
+          <span class="math display">
+            \[
+            A = \left( \begin{array}{cccc}
+            1 &amp; 2 &amp; 3 &amp; 4 \\
+            0 &amp; 2 &amp; 3 &amp; 4 \\
+            0 &amp; 0 &amp; 3 &amp; 4 \\
+            0 &amp; 0 &amp; 0 &amp; 4
+            \end{array} \right) .
+            \]
+          </span>
+        </p>
+      </div>
+      <h4 class="options-title">Alternativas</h4>
+      <form name="options">
+        <div class="radio-container">
+          <div class="radio-input-container" id="option_01">
+            <input type="radio" name="question_01" value="option_01" checked>
+            <label for="option_01">
+              <span class="math display">
+                \[
+                A^{-1} = \left( \begin{array}{rrrr}
+                  1 &amp;  0            &amp;  0           &amp;  0           \\
+                  0 &amp;  \frac{1}{2}  &amp; -\frac{1}{3} &amp;  0           \\
+                  0 &amp;  0            &amp;  \frac{1}{3} &amp;  \frac{1}{2} \\
+                  0 &amp;  0            &amp;  0           &amp;  \frac{1}{2}
+                \end{array} \right)
+                \]
+              </span>
+            </label>
+          </div>
+          <div class="radio-input-container radio-input-container-deselected" id="option_02">
+            <input type="radio" name="question_01" value="option_02">
+            <label for="option_02">
+              <span class="math display">
+                \[
+                A^{-1} = \left( \begin{array}{rrrr}
+                  1 &amp;  1            &amp;  0           &amp;  0           \\
+                  0 &amp;  \frac{1}{2}  &amp; -\frac{1}{2} &amp;  0           \\
+                  0 &amp;  0            &amp;  \frac{1}{3} &amp;  \frac{1}{3} \\
+                  0 &amp;  0            &amp;  0           &amp;  \frac{1}{4}
+                \end{array} \right)
+                \]
+              </span>
+            </label><br>
+          </div>
+          <div class="radio-input-container radio-input-container-deselected" id="option_03">
+            <input type="radio" name="question_01" value="option_03">
+            <label for="option_03">
+              <span class="math display">
+                \[
+                A^{-1} = \left( \begin{array}{rrrr}
+                  1 &amp; -1            &amp;  0           &amp;  0           \\
+                  0 &amp;  \frac{1}{2}  &amp; -\frac{1}{2} &amp;  0           \\
+                  0 &amp;  0            &amp;  \frac{1}{3} &amp; -\frac{1}{3} \\
+                  0 &amp;  0            &amp;  0           &amp;  \frac{1}{4}
+                \end{array} \right)
+                \]
+              </span>
+            </label>
+          </div>
+          <div class="radio-input-container radio-input-container-deselected" id="option_04">
+            <input type="radio" name="question_01" value="option_04">
+            <label for="option_04">
+              <span class="math display">
+                \[
+                A^{-1} = \left( \begin{array}{rrrr}
+                  1 &amp;  -1            &amp;  0           &amp;  0           \\
+                  0 &amp;   \frac{1}{3}  &amp; -\frac{1}{3} &amp;  0           \\
+                  0 &amp;   0            &amp; -\frac{1}{2} &amp;  \frac{1}{2} \\
+                  0 &amp;   0            &amp;  0           &amp;  \frac{1}{4}
+                \end{array} \right)
+                \]
+              </span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
