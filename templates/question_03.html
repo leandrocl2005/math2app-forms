@@ -1,0 +1,153 @@
+{% extends 'layout.html' %} {% block custom_styles %}
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename='css/header.css')}}"
+/>
+<style>
+  .question-layout-1-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 580px) {
+    .question-layout-1-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .question-layout-1-1 .question-text {
+    margin-bottom: 16px;
+  }
+
+  .question-layout-1-1 .question-text ul {
+    margin: 8px 0 0 32px;
+  }
+
+  .question-layout-1-1 .question-text ul li {
+    margin: 16px 0;
+  }
+
+  .question-layout-1-1 .question-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .radio-input-container {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 32px;
+  }
+
+  .radio-input-container label {
+    width: 100%;
+  }
+</style>
+{% endblock %} {% block headerLinks %}
+<div class="header-right">
+  <a href="/question_01">Questão 1</a>
+  <a href="/question_02">Questão 2</a>
+  <a class="active" href="/question_03">Questão 3</a>
+</div>
+{% endblock %} {% block content %}
+<div class="question-container">
+  <h3>Questão 3</h3>
+  <div class="question-layout">
+    <div class="question-text">
+      <p>
+        Use propriedades de logaritmos e expanda a expressão logarítmica
+        <span class="math inline">
+          \[\log\left[\frac{3x^3\sqrt[5]{1-x}}{2(x+1)^2} \right]\]
+        </span>
+        tanto quanto possível. Em seguida, marque a alternativa que melhor
+        representa.
+      </p>
+    </div>
+  </div>
+
+  <h4 class="options-title">Alternativas</h4>
+  <form name="options">
+    <div class="radio-container">
+      <div class="radio-input-container" id="option_01">
+        <input type="radio" name="question_03" value="option_01" checked />
+        <label for="option_01">
+          <p>
+            <span class="math display"
+              >\[r(x) = \log 2+3\log x +\frac{1}{5}\log(1-x)-\log
+              2+2\log(x+1)\]</span
+            >
+          </p>
+        </label>
+      </div>
+      <div
+        class="radio-input-container radio-input-container-deselected"
+        id="option_02"
+      >
+        <input type="radio" name="question_03" value="option_02" />
+        <label for="option_02">
+          <p>
+            <span class="math display"
+              >\[r(x) = \log 2+3\log x +\frac{1}{5}\log(1-x)-\log
+              2+2\log(x+1)\]</span
+            >
+          </p></label
+        ><br />
+      </div>
+      <div
+        class="radio-input-container radio-input-container-deselected"
+        id="option_03"
+      >
+        <input type="radio" name="question_03" value="option_03" />
+        <label for="option_03">
+          <p>
+            <span class="math display"
+              >\[r(x) = \log 2+3\log x +\frac{1}{5}\log(1-x)-\log
+              2+2\log(x+1)\]</span
+            >
+          </p>
+        </label>
+      </div>
+      <div
+        class="radio-input-container radio-input-container-deselected"
+        id="option_04"
+      >
+        <input type="radio" name="question_03" value="option_04" />
+        <label for="option_04">
+          <p>
+            <span class="math display"
+              >\[r(x) = \log 2+3\log x +\frac{1}{5}\log(1-x)-\log
+              2+2\log(x+1)\]</span
+            >
+          </p>
+        </label>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %} {% block scripts %}
+<script>
+  var rad3 = document.options.question_03;
+  var prev3 = rad3[0];
+  for (var i = 0; i < rad3.length; i++) {
+    rad3[i].addEventListener("change", function () {
+      prev3 ? console.log(prev3.value) : null;
+      if (this !== prev3) {
+        document
+          .getElementById(`${prev3.value}`)
+          .classList.toggle("radio-input-container-deselected");
+        prev3 = this;
+        document
+          .getElementById(`${prev3.value}`)
+          .classList.toggle("radio-input-container-deselected");
+      }
+      console.log(this.value);
+    });
+  }
+</script>
+{% endblock %}

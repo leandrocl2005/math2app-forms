@@ -1,0 +1,30 @@
+{% extends 'layout.html' %} {% block custom_styles %}
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename='css/header.css')}}"
+/>
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename='css/page-index.css')}}"
+/>
+{% endblock %} {% block content %}
+<div id="page-index">
+  <aside>
+    <h1>Hora de testar seus conhecimentos!</h1>
+
+    <p>
+      Clique em começar resolva as questões, revise e envie para o professor!
+    </p>
+
+    <a href="/question_01"> Começar </a>
+  </aside>
+  <div class="image-container">
+    <img src="{{url_for('static', filename='img/students.png')}}" />
+    <a href="https://br.freepik.com/vetores/escola"
+      >Escola vetor criado por freepik - br.freepik.com</a
+    >
+  </div>
+</div>
+{% endblock %} {% block scripts %}
+<script src="{{url_for('static', filename='js/main.js')}}"></script>
+{% endblock %}
